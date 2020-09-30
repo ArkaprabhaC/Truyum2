@@ -28,6 +28,8 @@ public class OAuthResourceServer extends ResourceServerConfigurerAdapter{
 			.authorizeRequests()
 			
 			.antMatchers("/oauth/**").permitAll()
+			.antMatchers("/product/all").hasAnyRole("ADMIN","CUSTOMER")
+			.antMatchers("/product/{id}").hasAnyRole("ADMIN","CUSTOMER")
 			.antMatchers("/product/**").hasRole("ADMIN")
 			.antMatchers("/cart/**").hasRole("CUSTOMER")
 			.and().sessionManagement()

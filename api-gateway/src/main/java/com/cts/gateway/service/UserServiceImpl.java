@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.cts.gateway.feign.UserDBproxy;
+import com.cts.gateway.feign.UserDBProxy;
 import com.cts.gateway.model.ResponseMessage;
 import com.cts.gateway.model.User;
 
@@ -21,7 +21,7 @@ import lombok.AllArgsConstructor;
 public class UserServiceImpl implements UserService{
 	
 	@Autowired
-	private UserDBproxy proxy;
+	private UserDBProxy proxy;
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;

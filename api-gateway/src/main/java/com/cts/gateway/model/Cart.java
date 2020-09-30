@@ -1,22 +1,14 @@
-package com.simulation.project.model;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.cts.gateway.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cart {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int serialNo;
 	
 	private String productName;

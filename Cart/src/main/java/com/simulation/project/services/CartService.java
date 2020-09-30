@@ -41,7 +41,6 @@ public class CartService {
 	public ResponseMessage addItem(int userId,int pid)
 	{
 		 Cart product = client.getProductByID(pid);
-		 product.setPid(pid);
 		 product.setUserId(userId);
 		 
 		 dao.save(product);

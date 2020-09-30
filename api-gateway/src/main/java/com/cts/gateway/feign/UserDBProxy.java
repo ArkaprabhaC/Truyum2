@@ -14,7 +14,7 @@ import com.cts.gateway.model.ResponseMessage;
 import com.cts.gateway.model.User;
 
 @FeignClient(name="USERDBSERVICE", url="${USERDBSERVICE:http://localhost:9000}")
-public interface UserDBproxy {
+public interface UserDBProxy {
 	
 	@GetMapping("/userdbservice/{username}")
 	Optional<User> findByUsername(@PathVariable final String username);

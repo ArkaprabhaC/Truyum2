@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.cts.gateway.feign.UserDBproxy;
+import com.cts.gateway.feign.UserDBProxy;
 import com.cts.gateway.model.AuthUserDetails;
 import com.cts.gateway.model.User;
 
@@ -24,7 +24,7 @@ import lombok.AllArgsConstructor;
 public class CustomDetailsService implements UserDetailsService{
 
 	@Autowired
-	private UserDBproxy proxy;
+	private UserDBProxy proxy;
 	
 	/**
 	 * loads AuthUser from Database

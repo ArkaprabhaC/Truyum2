@@ -13,18 +13,16 @@ public class Product {
 	private int id;
 	private String productName;
 	private float price;
-	private String description;
-	
-	private int userId;
+	private String description;	
+
 	
 	
 	public Product() {	}
-	public Product(int id, String productName, float price, String description, int userId) {
+	public Product(int id, String productName, float price, String description) {
 		this.id = id;
 		this.productName = productName;
 		this.price = price;
 		this.description = description;
-		this.userId = userId;
 	}
 	
 	
@@ -52,13 +50,6 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	
 
 	
 }
