@@ -15,7 +15,6 @@ public class Product {
 	private float price;
 	private String description;
 	
-	private int userId;
 	
 	
 	public Product() {	}
@@ -24,7 +23,6 @@ public class Product {
 		this.productName = productName;
 		this.price = price;
 		this.description = description;
-		this.userId = userId;
 	}
 	
 	
@@ -52,13 +50,7 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	
+
 
 	
 }
