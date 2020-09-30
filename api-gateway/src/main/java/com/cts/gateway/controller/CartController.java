@@ -16,7 +16,7 @@ import com.cts.gateway.model.Cart;
 import com.cts.gateway.model.ResponseMessage;
 
 @RestController
-@RequestMapping("/carts")
+@RequestMapping("/api/v1/cart")
 public class CartController {
 	
 	@Autowired

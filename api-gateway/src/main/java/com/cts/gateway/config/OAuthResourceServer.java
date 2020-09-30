@@ -28,10 +28,10 @@ public class OAuthResourceServer extends ResourceServerConfigurerAdapter{
 			.authorizeRequests()
 			
 			.antMatchers("/oauth/**").permitAll()
-			.antMatchers("/product/all").hasAnyRole("ADMIN","CUSTOMER")
-			.antMatchers("/product/{id}").hasAnyRole("ADMIN","CUSTOMER")
-			.antMatchers("/product/**").hasRole("ADMIN")
-			.antMatchers("/cart/**").hasRole("CUSTOMER")
+			.antMatchers("/api/v1/product/all").hasAnyRole("ADMIN","CUSTOMER")
+			.antMatchers("/api/v1/product/{id}").hasAnyRole("ADMIN","CUSTOMER")
+			.antMatchers("/api/v1/product/**").hasRole("ADMIN")
+			.antMatchers("/api/v1/cart/**").hasRole("CUSTOMER")
 			.and().sessionManagement()
 			.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}

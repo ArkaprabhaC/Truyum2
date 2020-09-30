@@ -17,7 +17,7 @@ import com.cts.gateway.model.Product;
 import com.cts.gateway.model.ResponseMessage;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/api/v1/product")
 public class ProductController {
 	
 	@Autowired

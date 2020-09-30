@@ -42,6 +42,7 @@ public class CartService {
 	{
 		 Cart product = client.getProductByID(pid);
 		 product.setUserId(userId);
+		 product.setPid(pid);
 		 
 		 dao.save(product);
 		 return new ResponseMessage(HttpStatus.OK, "Product added successfully");

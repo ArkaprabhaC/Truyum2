@@ -17,7 +17,7 @@ public class Cart {
 	
 	private String description;
 	
-	private int id;
+	private int pid;
 	
 	private int userId;
 		

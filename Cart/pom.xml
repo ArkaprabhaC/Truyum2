@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.simulation.project</groupId>
-	<artifactId>walletapp</artifactId>
+	<artifactId>Cart</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>walletapp</name>
+	<name>Cart</name>
 	<description>Handling transactions and invoice</description>
 
 	<properties>
