@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.cts.gateway.model.Cart;
 import com.cts.gateway.model.ResponseMessage;
 
-@FeignClient(name="CARTSERVICE", url="${PRODUCTSERVICE:http://localhost:8080}")
+@FeignClient(name="CARTSERVICE", url="${CARTSERVICE:http://localhost:8080}")
 @RequestMapping(value = "/cart")
 public interface CartProxy {
 	
