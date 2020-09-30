@@ -13,8 +13,13 @@ public class Product {
 	private int id;
 	private String productName;
 	private float price;
+<<<<<<< HEAD
 	private String description;	
 
+=======
+	private String description;
+	
+>>>>>>> 6478e879f79610720ea29eea7c3f4ecfcbd64824
 	
 	
 	public Product() {	}
@@ -50,6 +55,10 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6478e879f79610720ea29eea7c3f4ecfcbd64824
 
 	
 }
