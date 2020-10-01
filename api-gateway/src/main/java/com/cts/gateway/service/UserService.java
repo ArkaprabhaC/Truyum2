@@ -28,4 +28,6 @@ public interface UserService {
 	 */
 	ResponseMessage updateUser(final User user);
 	
+	public long getAuthUserID();
+	
 }

@@ -18,12 +18,12 @@ import com.cts.gateway.model.ResponseMessage;
 public interface CartProxy {
 	
 	@GetMapping(value = "/viewcart/{userId}")
-	public List<Cart> getItems(@PathVariable int userId);
+	public List<Cart> getItems(@PathVariable long userId);
 	
 	@PostMapping(value = "/add/{userId}/{pid}")
-	public ResponseEntity<ResponseMessage> addItem(@PathVariable int userId,@PathVariable int pid);
+	public ResponseEntity<ResponseMessage> addItem(@PathVariable long userId,@PathVariable int pid);
 	
 	@DeleteMapping(value = "/deleteitem/{userId}/{pid}")
-	public ResponseEntity<ResponseMessage> deleteItem(@PathVariable int userId,@PathVariable int pid);
+	public ResponseEntity<ResponseMessage> deleteItem(@PathVariable long userId,@PathVariable int pid);
 
 }

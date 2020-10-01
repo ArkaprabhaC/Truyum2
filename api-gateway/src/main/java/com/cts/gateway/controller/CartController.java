@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cts.gateway.feign.CartProxy;
 import com.cts.gateway.model.Cart;
 import com.cts.gateway.model.ResponseMessage;
+import com.cts.gateway.service.UserService;
 
 @RestController
 @RequestMapping("/api/v1/cart")
@@ -21,24 +22,29 @@ public class CartController {
 	
 	@Autowired
 	CartProxy cartProxy;
+
+	@Autowired
+	private UserService service;
 	
-	@GetMapping("/viewcart/{userId}")
-	public List<Cart> getItems(@PathVariable int userId) {
-		
-		return cartProxy.getItems(userId);		
+
+
+	@GetMapping("/viewcart")
+	public List<Cart> getItems() {
+		long uid = service.getAuthUserID();
+		return cartProxy.getItems(uid);		
 		
 	}
 	
-	@PostMapping("/add/{userId}/{pid}")
-	public ResponseEntity<ResponseMessage> addItem(@PathVariable int userId,@PathVariable int pid) {
-		
-		return cartProxy.addItem(userId, pid);
+	@PostMapping("/add/{pid}")
+	public ResponseEntity<ResponseMessage> addItem(@PathVariable int pid) {
+		long uid = service.getAuthUserID();
+		return cartProxy.addItem(uid, pid);
 	}
 	
-	@DeleteMapping("/deleteitem/{userId}/{pid}")
-	public ResponseEntity<ResponseMessage> deleteItem(@PathVariable int userId,@PathVariable int pid) {
-		
-		return cartProxy.deleteItem(userId, pid);
+	@DeleteMapping("/deleteitem/{pid}")
+	public ResponseEntity<ResponseMessage> deleteItem(@PathVariable int pid) {
+		long uid = service.getAuthUserID();
+		return cartProxy.deleteItem(uid, pid);
 	}
 
 }
