@@ -55,6 +55,7 @@ public class ApiGatewayApplication {
 		return PathSelectors.regex("/api/.*");
 	}
 
+	@SuppressWarnings("deprecation")
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Truyum 2 API").description("Truyum API documentation")
 				.termsOfServiceUrl("https://cognizant.com").contact("arkaprabha.chatterjee@cognizant.com").license("Cognizant License")
